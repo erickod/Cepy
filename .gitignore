@@ -1,0 +1,10 @@
+cepy/__pycache__/*
+cepy/errors/__pycache__/*
+cepy/interfaces/__pycache__/*
+cepy/loader/__pycache__/*
+cepy/model/__pycache__/*
+cepy/services/__pycache__/*
+cepy/services/*/__pycache__/*
+cepy/tests/__pycache__/*
+cepy/validations/__pycache__/*
+cepy/transforms/__pycache__/*
