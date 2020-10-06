@@ -2,9 +2,10 @@
 Uma lib feita em python para consultar cep em diversos serviços
 
 ## Serviços disponíveis
+- AwesomeApi
+- Cep.la
 - Correios
 - ViaCep
-- AwesomeApi
 - Widenet
 
 ## Como utilizar
