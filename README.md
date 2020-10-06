@@ -29,5 +29,4 @@ print(cep(21351050))
 ```
 
 ## Observações importantes
-- Tudo ainda está sendo desenvolvido, mas é minimamente funcional;
 - Faça sugestões, envie pull resquests e ajude o projeto a crescer.
