@@ -9,6 +9,7 @@ Uma lib feita em python para consultar cep em diversos serviços
 - Widenet
 
 ## Como utilizar
+No mesmo diretório onde está o example.py execute o código abaixo:
 
 ```
 from cepy import Cepy
