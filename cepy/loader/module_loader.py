@@ -27,7 +27,7 @@ class Loader:
         for module_object in dir(module):
             object_ = getattr(module, module_object)
             if hasattr(object_, 'loader_flag'):
-                if object_.is_active:
+                if object_.loader_flag:
                     self.__loaded_objects.append(object_)
 
     def __append_to_path(self, path):

@@ -8,7 +8,6 @@ class CepFillTransform(TransformInterface):
     Fill cep with 0 if len < 8
     '''
     loader_flag = True
-    is_active = True
     
     @classmethod
     def transform(cls, cep: typing.Union[str, int]) -> str:

@@ -9,7 +9,6 @@ class CepInvalidCharacterValidation(ValidationInterface):
     Throw an error if theres is invalid characters
     '''
     loader_flag = True
-    is_active = True
     
     @classmethod
     def validate(cls, cep: str):

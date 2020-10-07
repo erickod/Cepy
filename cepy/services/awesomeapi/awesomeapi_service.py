@@ -11,7 +11,6 @@ class AwesomeApiService(ServiceInterface):
     __config = config
     __cep_model = Cep
     loader_flag = True
-    is_active: bool = False
     
     @classmethod
     def get(cls, cep:str) -> Cep:

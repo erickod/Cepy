@@ -11,7 +11,6 @@ class ViaCEPService(ServiceInterface):
     __config = config
     __cep_model = Cep
     loader_flag = True
-    is_active: bool = True
     
     @classmethod
     def get(cls, cep:str) -> Cep:

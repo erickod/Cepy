@@ -9,7 +9,6 @@ class RemoveNonDigitsTransform(TransformInterface):
     Remove everything that don't matches with digits
     '''
     loader_flag = True
-    is_active = True
     
     @classmethod
     def transform(cls, cep: typing.Union[str, int]) -> str:
