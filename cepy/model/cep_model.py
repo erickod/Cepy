@@ -33,6 +33,9 @@ class Cep:
     def __str__(self):
         return f'{self.__container}'
     
+    def __repr__(self,):
+        return self.__str__()
+    
     def __getitem__(self, key):
         if not key in self.__container.keys():
             raise KeyError('Key not allowed')
