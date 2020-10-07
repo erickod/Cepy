@@ -1,5 +1,4 @@
 import json
-import re
 from urllib.request import Request, urlopen
 
 from cepy.interfaces import ServiceInterface
