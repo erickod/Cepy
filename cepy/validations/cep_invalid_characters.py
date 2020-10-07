@@ -6,7 +6,7 @@ from cepy.interfaces import ValidationInterface
 
 class CepInvalidCharacterValidation(ValidationInterface):
     '''
-    Throw an error if len != 8
+    Throw an error if theres is invalid characters
     '''
     loader_flag = True
     is_active = True
