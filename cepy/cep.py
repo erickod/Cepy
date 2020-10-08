@@ -18,7 +18,8 @@ class Cepy:
         async def exec_tasks(tasks=tasks, get_all=get_all):
             ended, working = await asyncio.wait(
                 tasks, 
-                return_when=asyncio.FIRST_COMPLETED if not get_all else asyncio.ALL_COMPLETED
+                return_when=asyncio.FIRST_COMPLETED if not get_all\
+                     else asyncio.ALL_COMPLETED
             )
             if list(ended)[0].exception():
                 if working:
