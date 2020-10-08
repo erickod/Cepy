@@ -23,7 +23,23 @@ print(cep(21351050))
 # {'cep': '21351050', 'state': 'RJ', 'city': 'Rio de Janeiro', 'district': 'Madureira', 
 # 'address': 'Estrada do Portela - até 279 - lado ímpar', 'provider': 'CorreiosService'}
 ```
+### Consultando todos os serviços
+```
+from cepy import Cepy
 
+cep = Cepy()
+print(cep(21351050, get_all=True))
+```
+
+```
+#[{'cep': '01513000', 'state': 'SP', 'city': 'São Paulo', 'district': 'Liberdade', 'address': 'Rua São Paulo', 
+#'provider': 'CepLaService'}, {'cep': '01513000', #'state': 'SP', 'city': 'São Paulo', 'district': 'Liberdade', 
+#'address': 'Rua São Paulo', 'provider': 'AwesomeApiService'}, {'cep': '01513000', 'state': 'SP', #'city': 'São Paulo', 
+#'district': 'Liberdade', 'address': 'Rua São Paulo', 'provider': 'ViaCEPService'}, {'cep': '01513000', 'state': 'SP', 
+#'city': 'São Paulo', #'district': 'Liberdade', 'address': 'Rua São Paulo', 'provider': 'WideNetService'}, 
+#{'cep': '01513000', 'state': 'SP', 'city': 'São Paulo', 'district': #'Liberdade', 'address': 'Rua São Paulo', 
+#'provider': 'CorreiosService'}]
+```
 
 ### Quando o cep não é encontrado
 ```
