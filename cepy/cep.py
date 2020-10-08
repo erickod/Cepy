@@ -7,7 +7,7 @@ class Cepy:
     def __init__(self, *, loader=Loader) -> None:
         self.__loader = loader       
     
-    def get(self, cep: typing.Union[str, int]):
+    def get(self, cep: typing.Union[str, int], *, get_all=False):
         cep = self.__apply_transforms(cep)
         tasks: typing.Set[typing.Awaitable] = set()
         loop = asyncio.get_event_loop()
@@ -15,10 +15,10 @@ class Cepy:
             future = loop.run_in_executor(None, service().get, cep)
             tasks.add(future)
         
-        async def exec_tasks(tasks=tasks):
+        async def exec_tasks(tasks=tasks, get_all=get_all):
             ended, working = await asyncio.wait(
                 tasks, 
-                return_when=asyncio.FIRST_COMPLETED
+                return_when=asyncio.FIRST_COMPLETED if not get_all else asyncio.ALL_COMPLETED
             )
             if list(ended)[0].exception():
                 if working:
@@ -33,8 +33,13 @@ class Cepy:
                     return {make_result()}
             return ended
 
-        response = list(loop.run_until_complete(exec_tasks()))[0]
-        return response.result()
+        
+        response = list(loop.run_until_complete(exec_tasks()))
+        
+        if not get_all:
+            return response[0].result()
+
+        return [res.result() for res in response]
     
     def __apply_transforms(self, cep: typing.Union[str, int]) -> str:
         for transform in self.__loader('cepy/transforms').load():
