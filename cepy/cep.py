@@ -47,5 +47,5 @@ class Cepy:
             cep = transform.transform(cep)
         return str(cep)
 
-    def __call__(self, cep):
-        return self.get(cep)
+    def __call__(self, cep, get_all=False):
+        return self.get(cep, get_all=get_all)
