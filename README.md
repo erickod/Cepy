@@ -45,6 +45,3 @@ print(cep(21351050, get_all=True))
 ```
 # {'response': 'Cep não encontrado'}
 ```
-
-## Observações importantes
-- Faça sugestões, envie pull resquests e ajude o projeto a crescer.
